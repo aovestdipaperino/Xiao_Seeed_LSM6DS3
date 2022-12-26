@@ -41,6 +41,16 @@ LSM6DS3Class::~LSM6DS3Class()
 
 int LSM6DS3Class::begin()
 {
+  // Enable the IMU by powering the pin.
+  pinMode(PIN_LSM6DS3TR_C_POWER, OUTPUT);
+  NRF_P1->PIN_CNF[8] = ((uint32_t)NRF_GPIO_PIN_DIR_OUTPUT << GPIO_PIN_CNF_DIR_Pos)
+                      | ((uint32_t)NRF_GPIO_PIN_INPUT_DISCONNECT << GPIO_PIN_CNF_INPUT_Pos)
+                      | ((uint32_t)NRF_GPIO_PIN_NOPULL << GPIO_PIN_CNF_PULL_Pos)
+                      | ((uint32_t)NRF_GPIO_PIN_H0H1 << GPIO_PIN_CNF_DRIVE_Pos)
+                      | ((uint32_t)NRF_GPIO_PIN_NOSENSE << GPIO_PIN_CNF_SENSE_Pos);
+	digitalWrite(PIN_LSM6DS3TR_C_POWER, HIGH);
+	delay(100);
+
   if (_spi != NULL) {
     pinMode(_csPin, OUTPUT);
     digitalWrite(_csPin, HIGH);

@@ -1,5 +1,5 @@
-:repository-owner: arduino-libraries
-:repository-name: Arduino_LSM6DS3
+:repository-owner: aovestdipaperino
+:repository-name: Xiao_Seeed_LSM6DS3
 
 = {repository-name} Library for Arduino =
 
@@ -7,6 +7,6 @@ image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/
 image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/compile-examples.yml/badge.svg["Compile Examples status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/compile-examples.yml"]
 image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/spell-check.yml/badge.svg["Spell Check status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/spell-check.yml"]
 
-Allows you to read the accelerometer and gyroscope values from the LSM6DS3 IMU on your Arduino Nano 33 IoT or Arduino Uno WiFi Rev2 boards.
+Allows you to read the accelerometer and gyroscope values from the LSM6DS3 IMU on your Xiao Seeed BLE Sense board.
 
 For more information about this library please visit us at https://www.arduino.cc/reference/en/libraries/arduino_lsm6ds3/
